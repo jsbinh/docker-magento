@@ -44,7 +44,7 @@ RUN unlink /etc/php/8.2/cli/conf.d/20-xdebug.ini \
 	&& unlink /etc/php/8.2/fpm/conf.d/20-xdebug.ini
 
 RUN pecl channel-update pecl.php.net
-RUN export DEBIAN_FRONTEND=noninteractive\ 
+RUN export DEBIAN_FRONTEND=noninteractive\
  		&& apt-get install libmcrypt-dev -y
 RUN pecl install mcrypt
 RUN pecl install -f xdebug-3.1.5
